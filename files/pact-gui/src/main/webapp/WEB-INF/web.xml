@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<servlet>
+		<servlet-name>ajaxServlet</servlet-name>
+		<servlet-class>eu.stratosphere.pact.gui.designer.server.AjaxServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ajaxServlet</servlet-name>
+		<url-pattern>/designer/backend/ajax</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>dataServlet</servlet-name>
+		<servlet-class>eu.stratosphere.pact.gui.designer.server.DataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dataServlet</servlet-name>
+		<url-pattern>/designer/backend/data</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>com_allen_sauer_gwt_log_server_RemoteLoggerServiceImpl</servlet-name>
+		<servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>com_allen_sauer_gwt_log_server_RemoteLoggerServiceImpl</servlet-name>
+		<url-pattern>/designer/backend/gwt-log</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+	 	<welcome-file>/index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

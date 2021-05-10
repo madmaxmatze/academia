@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: Mathias Nitzsche - based on earlier implementation of Dominik 
+	Guzei: http://code.google.com/p/gwt-codemirror-widget/ -->
+
+<module rename-to='codemirror'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.json.JSON" />
+
+	<source path='client' />
+
+	<script src='codemirror.js' />
+	<script src='clike.js' />
+	<stylesheet src='codemirror.css' />
+</module>

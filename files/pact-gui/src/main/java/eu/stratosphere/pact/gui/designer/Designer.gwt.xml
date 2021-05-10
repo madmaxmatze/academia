@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Central GWT configuration file. This file describes the resources that are needed by the designer module -->
+<module rename-to='designer'>
+	<!-- LOAD OTHER GWT MODULS ***************************************************************************************** -->
+
+	<!-- Inherit the core and i18n GWT stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- <inherits name="com.google.gwt.i18n.I18N" /> <inherits name="com.google.gwt.resources.Resources" /> -->
+
+	<!-- GUICE for GWT (named Gin) Dependency Injection: http://code.google.com/p/google-gin/wiki/GinTutorial -->
+	<inherits name="com.google.gwt.inject.Inject" />
+
+	<!-- GWT base style sheet: possible: standard.Standard, chrome.Chrome, dark.Dark -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+
+	<!-- load GWT EXT lib - Front end Widgets -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.uibinder.GxtUiBinder' />
+	<inherits name='com.sencha.gwt.uibinder.UiBinder' />
+
+	<!-- GWT DND Drag and Drop -->
+	<inherits name='com.allen_sauer.gwt.dnd.gwt-dnd' />
+
+	<!-- Drawing -->
+	<inherits name='com.sencha.gxt.chart.Chart' />
+	<replace-with class='com.sencha.gxt.chart.client.draw.engine.SVG'>
+		<when-type-is class='com.sencha.gxt.chart.client.draw.Surface' />
+	</replace-with>
+
+	<replace-with class='com.sencha.gxt.chart.client.draw.engine.VML'>
+		<when-type-is class='com.sencha.gxt.chart.client.draw.Surface' />
+		<any>
+			<when-property-is name='user.agent' value='ie6' />
+			<when-property-is name='user.agent' value='ie8' />
+		</any>
+	</replace-with>
+
+
+	<!-- GWT Logging -->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" /><!-- For production, most teams prefer to set the default 
+		log level to `OFF` <inherits name="com.allen_sauer.gwt.log.gwt-log-OFF" /> -->
+	<set-property name="log_DivLogger" value="DISABLED" /><!-- disable front end logging div -->
+	<set-property name="log_ConsoleLogger" value="ENABLED" />
+ 	<set-property name="log_FirebugLogger" value="ENABLED" />
+  	<set-property name="log_GWTLogger" value="ENABLED" />
+  	<set-property name="log_SystemLogger" value="ENABLED" />
+
+	<!-- load own custom modules -->
+	<inherits name='eu.stratosphere.pact.gui.widgets.codemirror.CodeMirror' />
+
+
+	<!-- Specify the paths for client translatable code ***************************************************************************************** -->
+	<source path='client' />
+	<source path='shared' />
+
+
+	<!-- Set properties ************************************************************************************************************************* -->
+	<!-- i18n languages -->
+	<!-- <extend-property name="locale" values="en" /> <extend-property name="locale" values="de" /> -->
+
+	<!-- limit compiling to certain browsers: http://anublog.colombounplug.com/2011/02/gwt-and-multiple-permutations-of-compilation/ -->
+	<!-- gecko1_8,safari
+		<set-property name="user.agent" value="gecko1_8,safari" />
+ 	-->
+ 	 
+	<!-- only save HTML within uibinder xml files -->
+	<set-configuration-property name="UiBinder.useSafeHtmlTemplates" value="true" />
+
+	<!-- Define Servlets ********************************************************************************************************************** -->
+	<!-- 	 -->
+	<servlet path='/backend/ajax' class='eu.stratosphere.pact.gui.designer.server.AjaxServlet' />
+	<servlet path='/backend/data' class='eu.stratosphere.pact.gui.designer.server.DataServlet' />
+	<servlet path='/backend/gwt-log' class='com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl' />
+	   
+	<stylesheet src='designer.css' />
+
+	<!-- Specify the app entry point class ************************************************************************************************ -->
+	<entry-point class='eu.stratosphere.pact.gui.designer.client.Designer' />
+</module>

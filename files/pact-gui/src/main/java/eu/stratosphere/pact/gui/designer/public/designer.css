@@ -1,0 +1,152 @@
+.guiPact {
+	z-index: 5;
+	box-shadow: 3px 3px 3px #CCC;
+	-o-box-shadow: 3px 3px 3px #CCC;
+	-icab-box-shadow: 3px 3px 3px #CCC;
+	-khtml-box-shadow: 3px 3px 3px #CCC;
+	-moz-box-shadow: 3px 3px 3px #CCC;
+	-webkit-box-shadow: 3px 3px 3px #CCC;
+
+	overflow: hidden;
+	border: 1px solid #99BBE8;
+	border-top-color: transparent;
+}
+
+.guiConnection {
+	border: 1px dotted transparent;
+}
+
+.guiConnection-focus {
+	
+}
+
+.guiPact-focus,.guiConnectionHandler-focus {
+	z-index: 6;
+	border-color: red;
+}
+
+.pactDropHandler {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 14px;
+	width: 20px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pactDropHandler-OUTPUT {
+	text-align: right;
+}
+
+.pactDropHandler-droptrue { /*	background: #E4F5FE;	*/
+	background-color: #33CC33;
+}
+
+.pactDropHandler-dropfalse {
+	background-color: red;
+}
+
+.guiPact-hover .guiObjectControls,.guiConnection-focus .guiObjectControls
+	{
+	display: block !important;
+}
+
+.guiObjectContent {
+	position: relative;
+	overflow: hidden;
+}
+
+.guiPact .guiObjectContent,.guiPact {
+	height: 500px;
+	background: #CEDFF5;
+}
+.guiConnection .guiObjectContent {
+	height: 100%;
+}
+
+.guiConnectionHandler {
+	display: none;
+	z-index: 10 !important;;
+	cursor: crosshair !important;
+}
+
+.guiConnectionHandler div {
+	background: red;
+}
+
+
+/* overwrite .dragdrop-handle from GWT DND */
+.guiConnection-draggingImpossible {
+	cursor: default !important;
+}
+
+.guiPact .guiConnectionHandler {
+/*	background: blue;
+	top: 41px !important;
+	position: absolute;	*/
+}
+
+.guiPact .guiConnectionHandler-start {
+	right: -5px !important;
+	left: auto !important;
+}
+
+.guiPact .guiConnectionHandler-end {
+	left: -5px !important;
+}
+
+.guiPact-source .guiConnectionHandler,
+.guiPact-sink .guiConnectionHandler {
+	 /*	top: 11px !important;	*/
+}
+
+.guiConnectionHandler-focus { /* background: red;   */
+	display: block !important;
+}
+
+/* GUI PACT HEADLINE */
+/*
+.guiPact .headline {
+	width: 100%;
+	height: 24px;
+	overflow: hidden;
+	background-color: rgba(30, 65, 118, 0.3);
+	border-radius: 10px 10px 0 0;
+}
+.guiPact-sink .headline, .guiPact-source .headline {
+	border-radius: 20px 20px 0 0;
+}
+.guiPact .headline .headlineContent {
+	padding: 3px;
+	font-weight: bold;	
+}
+*/
+
+.guiPact .pactNameLabel {
+	font-size: 0.9em; position : absolute;
+	top: 0px;
+	left: 20px;
+	width: 110px;
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+}
+
+.guiPact .pactOutputContractLabel {
+	font-size: 8px;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	height: 20px;
+	width: 110px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.x-toolbar span {
+	font-weight: bold;
+}
+
+.x-toolbar-mark {
+    background: #dae6f4 !important;
+}

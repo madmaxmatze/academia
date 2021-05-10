@@ -1,0 +1,89 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<!-- Declarative Layout with UiBinder: http://code.google.com/webtoolkit/doc/latest/DevGuideUiBinder.html -->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client" xmlns:gxtContainer="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxtMenu="urn:import:com.sencha.gxt.widget.core.client.menu" xmlns:gxtToolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxtButton="urn:import:com.sencha.gxt.widget.core.client.button" xmlns:gxtForm="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:guiComponents="urn:eu.stratosphere.gui.client.view.guicomponents" xmlns:workaround="urn:import:eu.stratosphere.pact.gui.designer.client.view">
+	<ui:style>
+		/*
+				.propertiesContainer {
+					background-color: #DFE8F6;
+				}
+				 class="{style.propertiesContainer}"
+			 */
+	</ui:style>
+
+	<ui:with type="com.sencha.gxt.core.client.util.Margins" field="northMargins">
+		<ui:attributes top="0" right="0" bottom="0" left="0" />
+	</ui:with>
+
+	<ui:with type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData" field="northLayoutData">
+		<ui:attributes size="30" margins="{northMargins}" />
+	</ui:with>
+
+	<ui:with type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData" field="eastLayoutData">
+		<ui:attributes size="300" split="true" />
+	</ui:with>
+
+	<ui:with type="eu.stratosphere.pact.gui.designer.client.resources.Images" field="images" />
+
+
+	<gxtContainer:BorderLayoutContainer ui:field="tabContentContainer">
+		<gxtContainer:north>
+		</gxtContainer:north>
+
+		<gxtContainer:west>
+		</gxtContainer:west>
+
+		<gxtContainer:center>
+			<gxtContainer:BorderLayoutContainer ui:field="codeMirrorContainer">
+				<gxtContainer:north layoutData="{northLayoutData}">
+					<gxtToolbar:ToolBar ui:field="toolBar">
+						<gxtButton:TextButton text="Undo" ui:field="button_undo" icon="{images.undo16}" />
+						<gxtButton:TextButton text="Redo" ui:field="button_redo" icon="{images.redo16}" />
+						<gxtToolbar:SeparatorToolItem />
+						<gxtButton:TextButton text="Reindent" ui:field="button_reindent" icon="{images.indent16}" />
+						<gxtToolbar:FillToolItem />
+						<gxtButton:TextButton text="Insert MapStub" ui:field="button_stub" icon="{images.stub16}" />
+					</gxtToolbar:ToolBar>
+				</gxtContainer:north>
+
+				<gxtContainer:center>
+				</gxtContainer:center>
+			</gxtContainer:BorderLayoutContainer>
+		</gxtContainer:center>
+
+		<gxtContainer:east layoutData="{eastLayoutData}">
+			<gxt:ContentPanel ui:field="propertiesContainer" headingText="Properties">
+				<gxtContainer:VerticalLayoutContainer>
+					<gxtContainer:child>
+						<gxtForm:FieldLabel text="Name" labelAlign="TOP">
+							<gxtForm:widget>
+								<gxtForm:TextField ui:field="nameTextField" allowBlank="false" />
+							</gxtForm:widget>
+						</gxtForm:FieldLabel>
+					</gxtContainer:child>
+
+					<gxtContainer:child>
+						<gxtForm:FieldLabel text="Input Contract" labelAlign="TOP" ui:field="typeComboBoxContainer">
+							<gxtForm:widget>
+								<gxtForm:SimpleComboBox ui:field="typeComboBox" allowBlank="false" triggerAction="ALL"
+									editable="false" forceSelection="true" />
+							</gxtForm:widget>
+						</gxtForm:FieldLabel>
+					</gxtContainer:child>
+					
+					<gxtContainer:child>
+						<gxtForm:FieldLabel text="Degree of Parallelism" labelAlign="TOP" ui:field="degreeOfParallelismComboBoxContainer">
+							<gxtForm:widget>
+								<gxtForm:SimpleComboBox ui:field="degreeOfParallelismComboBox" allowBlank="false" triggerAction="ALL"
+									editable="false" forceSelection="true" />
+							</gxtForm:widget>
+						</gxtForm:FieldLabel>
+					</gxtContainer:child>
+				</gxtContainer:VerticalLayoutContainer>
+			</gxt:ContentPanel>
+		</gxtContainer:east>
+	</gxtContainer:BorderLayoutContainer>
+</ui:UiBinder>
