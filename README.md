@@ -3,7 +3,7 @@ Some output of my short academic career
 
 
 # 2011 - Master thesis
-<b>"<i>Entwicklung einer browserbasierten Benutzerschnittstelle zur Erstellung von PACT-Programmen</i>"<b><br>
+<b>"<i>Entwicklung einer browserbasierten Benutzerschnittstelle zur Erstellung von PACT-Programmen</i>"</b><br>
 
 In 2011 I wrote my Master Thesis as a member of the <a href="http://www.stratosphere.eu" target="_blank">Stratosphere-Project</a> in the institute <a href="http://www.dbis.informatik.hu-berlin.de/" target="_blank">Databases and Information Systems</a>. Within the Stratosphere Project PACT-programs were used to process large amounts of data in parallel on a distributed cluster computer architecture. However creating a PACT-program was very time-consuming, complicated, and required the installation of a development environment. My master thesis describes the implementation of the <a href="https://code.google.com/webtoolkit/" target="_blank">Google Web Toolkit</a> based PACT-GUI web application. The application allows to graphically model and implement PACT-programs within a rich client browser application. In future, the ease with which users can now generate PACT-programs may promote the wide adoption of Stratosphere System.
 
@@ -13,15 +13,15 @@ In 2011 I wrote my Master Thesis as a member of the <a href="http://www.stratosp
 <img src="files/pact-gui-editor.png" width="450" />
 </td></tr></table>
 
-> :paperclip: "<b><a href="2012%20-%20Mathias%20Nitzsche%20-%20HU%20Master%20thesis%20-%20English%20expose.pdf">Thesis Exposé (English)</a></b>"
-> :paperclip: "<b><a href="2012%20-%20Mathias%20Nitzsche%20-%20HU%20Master%20thesis.pdf">Final Thesis (German)</a></b>"
+> :paperclip: <b><a href="2012%20-%20Mathias%20Nitzsche%20-%20HU%20Master%20thesis%20-%20English%20expose.pdf">Thesis Exposé (English)</a></b><br>
+> :paperclip: <b><a href="2012%20-%20Mathias%20Nitzsche%20-%20HU%20Master%20thesis.pdf">Final Thesis (German)</a></b>
 
 
 # 2010 - Latency in TOR
 In 2010 I was part of a research team, that investigated to what extent users will accept decreases in usability for an increase of their anonymity. My contribution to the project was quantitative specifics about the latency due to <a href="https://www.torproject.org" title="The Onion Router Project - Homepage" target="_blank">TOR</a> usage.</p>
 
 > :paperclip: "<b><a href="https://github.com/madmaxmatze/academia/blob/main/2010%20-%20Mathias%20Nitzsche%20-%20HU%20Paper%20-%20Anonymity%20Technologies%20and%20Usability%20-%20Latency%20in%20Tor.pdf" target="_blank">Latency in TOR</a></b>"<br>
-> <b><a href="http://aisel.aisnet.org/amcis2010/258/" target="_blank">Final Publication on the Amcis 2010</a></b>
+> :paperclip: <b><a href="http://aisel.aisnet.org/amcis2010/258/" target="_blank">Final Publication on the Amcis 2010</a></b>
 
 
 # 2010 - DNS Economics
